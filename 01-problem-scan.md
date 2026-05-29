@@ -51,3 +51,53 @@ Dựa trên danh sách SCAN, dưới đây là 3 thẻ bài toán tiềm năng n
 │ Quick Architecture: [x] LLM Feature (Tạo bản nháp lâm sàng) │
 └─────────────────────────────────────────────────────────────┘
 ```
+
+# QUICK PROBLEM CARD #2: VinFast Tự động phân loại và khởi tạo Ticket bảo hành
+┌─────────────────────────────────────────────────────────────┐
+│ QUICK PROBLEM CARD #2                                       │
+│                                                             │
+│ Bài toán: Nhân viên bảo hành xử lý thủ công các mô tả lỗi   │
+│ phi cấu trúc từ khách hàng để tạo ticket kỹ thuật.          │
+│ Công ty thành viên: [x] VinFast                             │
+│                                                             │
+│ Ai đang đau (Actor)? Nhân viên kỹ thuật xưởng, Khách hàng    │
+│                                                             │
+│ Workflow thủ công hiện tại (3 bước):                        │
+│   1. Tiếp nhận email/transcript mô tả hiện tượng lỗi từ khách│
+│   ──> 2. Đọc hiểu, tra cứu cẩm nang mã lỗi DTC để gán tag lỗi.│
+│   ──> 3. Đánh giá thủ công mức độ nghiêm trọng để phân loại P1-P3│
+│                                                             │
+│ Bước nào tốn nhất? Bước 2 (⏱ 3 - 4 phút/lượt phân loại)      │
+│ AI có thể nhảy vào hỗ trợ ở bước nào? Bước 2 & 3             │
+│ (Trích xuất mã lỗi ──> Tự động gán tag và định tuyến ticket)│
+│                                                             │
+│ Đo thành công bằng gì (Metric có số)?                        │
+│ Rút ngắn thời gian tạo ticket từ 5 phút ──> dưới 30 giây/ca. │
+│                                                             │
+│ Quick Architecture: [x] LLM Classifier / Router             │
+└─────────────────────────────────────────────────────────────┘
+
+# QUICK PROBLEM CARD #3: Vinhomes Tự động hóa phản hồi phản ánh của cư dân
+┌─────────────────────────────────────────────────────────────┐
+│ QUICK PROBLEM CARD #3                                       │
+│                                                             │
+│ Bài toán: Nhân viên CSKH phản hồi thủ công các khiếu nại    │
+│ của cư dân trên App gây chậm trễ SLA từ 1-3 ngày.           │
+│ Công ty thành viên: [x] Vinhomes                            │
+│                                                             │
+│ Ai đang đau (Actor)? Nhân viên CSKH, Cư dân đô thị.          │
+│                                                             │
+│ Workflow thủ công hiện tại (3 bước):                        │
+│   1. Đọc nội dung phản ánh khiếu nại (1-2 sao) trên hệ thống.│
+│   ──> 2. Tra cứu quy trình xử lý nội bộ của Ban quản lý tòa nhà.│
+│   ──> 3. Soạn thảo văn bản phản hồi chính thức bằng tay.    │
+│                                                             │
+│ Bước nào tốn nhất? Bước 3 (⏱ 8 - 10 phút/văn bản phản hồi)   │
+│ AI có thể nhảy vào hỗ trợ ở bước nào? Bước 3                 │
+│ (Tự động tạo bản nháp phản hồi chuẩn mực theo giọng điệu hãng)│
+│                                                             │
+│ Đo thành công bằng gì (Metric có số)?                        │
+│ Giảm thời gian xử lý phản hồi từ 12 phút ──> dưới 1 phút.   │
+│                                                             │
+│ Quick Architecture: [x] LLM Feature (Tạo bản nháp phản hồi) │
+└─────────────────────────────────────────────────────────────┘
